@@ -7,4 +7,12 @@ We study basic tools necessary for the rest of the course: python, numpy, matplo
 
 ## Practicum 2
 
-## Practicum 2
+TODO
+
+## Practicum 3
+
+TODO
+
+## Datasets
+
+* Kaggle House Prices: https://drive.google.com/file/d/15QWu8QWhDmJC34ZiNYxdMlC1NWqGsXpJ/view?usp=sharing
