@@ -1,0 +1,3 @@
+house_pricing:
+  train_dataset: /Users/tony/datasets/kaggle/house_prices/train.csv
+  test_dataset: /Users/tony/datasets/kaggle/house_prices/test.csv
