@@ -106,10 +106,10 @@
     Общие принципы построения API \texttt{Scikit-learn}:
     \begin{itemize}
         \scriptsize
-        \item \textbf{Consistency:} все объекты (простые и сложные) используют общий интерфейс, состояющий из ограниченного набора методов
+        \item \textbf{Consistency:} все объекты (простые и сложные) используют общий интерфейс, состоящий из ограниченного набора методов
         \item \textbf{Inspection:} все параметры, передаваемые на вход моделям и полученные во время обучения, сохраняются и доступны как открытые аттрибуты класса
         \item \textbf{Non-proliferation of classes:} специализированные классы используются только для моделей, остальные объекты представлены стандартными типами/классами (например, датасетами могут быть numpy массивы, разреженные scipy матрицы или датафреймы pandas)
-        \item \textbf{Composition:} везде, где это возможно, модели реализованы так, чтобы им можно было использовать как ``строительные блоки'' других композиционных моделей
+        \item \textbf{Composition:} везде, где это возможно, модели реализованы так, чтобы их можно было использовать как ``строительные блоки'' других композиционных моделей
         \item \textbf{Sensible defaults:} все параметры моделей должны иметь ``разумные'' значения по умолчанию, чтобы модель можно было использовать для получения baseline решения
     \end{itemize}
 \end{frame}
@@ -151,7 +151,7 @@ model.fit(X, y)\end{lstlisting}
     \textbf{Параметры модели:}
     \begin{itemize}
         \item Гиперпараметры хранятся как аттрибуты класса
-        \item Обучамые параметры хранятся как аттрибуты с ``\_'' на конце
+        \item Обучаемые параметры хранятся как аттрибуты с ``\_'' на конце
     \end{itemize}
 
     \textbf{Пример:}
@@ -174,7 +174,7 @@ class SubtractMeanAndShiftEstimator(BaseEstimator):
     Интерфейс Predictor расширяет интерфейс Estimator, добавляя к нему два метода:
     \begin{itemize}
         \item \texttt{predict(X\_test)} для предсказания по входным данным \texttt{X\_test}
-        \item \texttt{score(X\_test, y\_test)} принимает данные для обучения
+        \item \texttt{score(X\_test, y\_test)} для оценки предсказания
     \end{itemize}
 
     \textbf{Пример:}
@@ -190,8 +190,6 @@ class SubtractMeanAndShiftEstimator(BaseEstimator):
 
     def score(self, X: NDArray, y: NDArray) -> float:
         return r2_score(y, self.predict(X))\end{lstlisting}
-
-    Практически все объекты в \texttt{scikit-learn}, преобразующие данные, являются Estimators
 \end{frame}
 
 \begin{frame}{Интерфейс Transformer}
