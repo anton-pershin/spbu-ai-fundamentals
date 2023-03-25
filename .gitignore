@@ -1,3 +1,7 @@
+# Temporary files
+_*.ipynb
+_*.py
+
 # Mac
 .DS_Store
 

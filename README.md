@@ -7,11 +7,23 @@ We study basic tools necessary for the rest of the course: python, numpy, matplo
 
 ## Practicum 2
 
-TODO
+We continue studying pandas and get familiar with data preprocessing techniques (filtering, imputing etc.).
 
 ## Practicum 3
 
-TODO
+We study the scikit-learn architecture.
+
+## Practicum 4
+
+We make use of scikit-learn classes for data preprocessing.
+
+## Practicum 5
+
+We study basic techniques for feature engineering (encoding of categorial features) and feature selection (variance threshold).
+
+## Practicum 6
+
+We study linear models for regression and classification problems.
 
 ## Datasets
 
