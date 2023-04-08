@@ -1,3 +1,6 @@
 house_pricing:
   train_dataset: /Users/tony/datasets/kaggle/house_prices/train.csv
   test_dataset: /Users/tony/datasets/kaggle/house_prices/test.csv
+classification:
+  wdbc: /Users/tony/datasets/kaggle/wdbc/data.csv
+  mushrooms: /Users/tony/datasets/kaggle/mushrooms/mushrooms.csv
