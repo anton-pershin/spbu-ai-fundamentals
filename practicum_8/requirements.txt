@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn
+category-encoders
+matplotlib
+pyyaml
+
+jupyter
+notebook
