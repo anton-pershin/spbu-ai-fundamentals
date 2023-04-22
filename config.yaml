@@ -4,3 +4,5 @@ house_pricing:
 classification:
   wdbc: /Users/tony/datasets/kaggle/wdbc/data.csv
   mushrooms: /Users/tony/datasets/kaggle/mushrooms/mushrooms.csv
+clustering:
+  flowcytometry: /Users/tony/datasets/flowcytometry
