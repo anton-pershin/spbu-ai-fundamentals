@@ -267,7 +267,7 @@
         \begin{itemize}
             \item init. Метод инициализации центроид. k-means++ (стандартный), рандомный и определенный пользователем.
             \item n\_init. Количество запусков алгоритма (было описано ранее на слайдах).
-            \item algorithm. Алгоритм Ллойда или Элкана. Второй является модификацией алгоритма Ллойда: ускорение работы путем исключения некоторого числа вычислений расстояний за счет использования неравенства треугольника).
+            \item algorithm. Алгоритм Ллойда или Элкана. Второй является модификацией алгоритма Ллойда: ускорение работы путем исключения некоторого числа вычислений расстояний за счет использования неравенства треугольника.
         \end{itemize}       
     \end{itemize}
 \end{frame}
@@ -316,23 +316,23 @@
         \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
         
         \Input{Выборка $X = \left \{ x_1, \ldots, x_n \right \}$, параметры $\varepsilon$ и $MinPts$}
-        $U = X, N = \emptyset, a = 0$\;
+        $U = X, K = \emptyset, a = 0, a_1, \dots, a_n = -1$\;
         \While{$U \neq \emptyset$}{
         	Взять $x \in U$\;
         	\eIf{$|U_\varepsilon(x)|<MinPts$}{
-        		Пометить $x$ как потененциально шумоваю точку\;
+        		Пометить $x$ как потенциально шумовую точку\;
         		}{
         			$K = U_\varepsilon(x), a=a+1$\;
+                        \For{$x' \in K$}{
+            			\eIf{$|U_\varepsilon(x)| \geq MinPts$}{
+            				$K = K \cup U_\varepsilon(x')$\;
+            			}{
+            				пометить $x'$ как граничную точку кластера $K$\;
+            			}
+                        }
+                        \lForEach{$x_i \in K$}{$a_i = a$}
+        		      $U = U \setminus K$\;
         		}
-        		\For{$x' \in K$}{
-        			\eIf{$|U_\varepsilon(x)| \geq MinPts$}{
-        				$K = K \cup U_\varepsilon(x')$\;
-        			}{
-        				пометить $x'$ как граничную точку кластера $K$\;
-        			}
-        		}
-        		\lForEach{$x_i \in K$}{$a_i = a$}
-        		$U = U \setminus K$\;
         }
         \caption{DBASCAN}
     \end{algorithm}	
