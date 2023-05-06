@@ -33,6 +33,14 @@ We continue studying logistic regression and introduce decision trees.
 
 We continue studying decision trees and also get familiar with kNN for classification and regression problems.
 
+## Practicum 9
+
+We study clustering algorithms including k-means and DBSCAN.
+
+## Practicum 10
+
+We study probabilistic inference exemplified by Bayesian networks.
+
 ## Datasets
 
 * Kaggle House Prices: https://drive.google.com/file/d/15QWu8QWhDmJC34ZiNYxdMlC1NWqGsXpJ/view?usp=sharing
